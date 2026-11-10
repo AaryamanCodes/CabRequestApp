@@ -1,5 +1,16 @@
 served = ["Delhi", "Jaipur"]
 slots = ["Morning", "Afternoon", "Evening", "Night"]
+while True:
+    action = input("What would you like to do? \n" 
+                   "V: View available cabs \n" 
+                   "R: Request a cab \n" 
+                   "Q: Quit the app").upper()    
+    if action == "R":
+        pass
+    if action == "V":
+        pass
+    if action == "Q":
+        break
 
 class RideRequest:
     def __init__(self, name, dest, slot, year, time):
@@ -8,7 +19,8 @@ class RideRequest:
         self.slot = slot
         self.year = year
         self.time = time
-        
+
+"""
     def valid(self):
         if self.year > 4:
             return False
@@ -18,7 +30,7 @@ class RideRequest:
             return False
         else:
             return True
-        
+"""        
 
 class Cab:
     def __init__(self, name, seats, left, dest, slist):
@@ -28,6 +40,8 @@ class Cab:
         self.left = left
         self.slist = slist
 
+
+"""
     def valid(self):
         if self.dest not in served:
             return False
@@ -35,3 +49,4 @@ class Cab:
             return False
         else:
             return True
+"""
